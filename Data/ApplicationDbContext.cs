@@ -13,6 +13,8 @@ namespace JWTTokenIdentity.Data
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+      base.OnModelCreating(builder);
+
       #region "Seed Data"
 
       builder.Entity<ApplicationRole>().HasData(
