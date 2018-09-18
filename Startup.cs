@@ -56,7 +56,7 @@ namespace JWTTokenIdentity
           ValidateAudience = true,
           ValidIssuer = "https://www.mysite.com",
           ValidAudience = "https://www.mysite.com",
-          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySecretKey"))
+          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecretKey"))
         };
       });
     }

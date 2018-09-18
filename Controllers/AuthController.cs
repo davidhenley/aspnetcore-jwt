@@ -63,7 +63,7 @@ namespace JWTTokenIdentity.Controllers
           new Claim(JwtRegisteredClaimNames.Sub, user.UserName)
         };
 
-        var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySecretKey"));
+        var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecretKey"));
 
         var token = new JwtSecurityToken(
           issuer: "https://www.mysite.com",
