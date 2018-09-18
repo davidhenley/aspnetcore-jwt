@@ -40,8 +40,6 @@ namespace JWTTokenIdentity
         .AddEntityFrameworkStores<ApplicationDbContext>()
         .AddDefaultTokenProviders();
 
-      services.AddIdentity<ApplicationUser, IdentityRole>();
-
       services.AddAuthentication(o =>
       {
         o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

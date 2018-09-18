@@ -35,16 +35,20 @@ namespace JWTTokenIdentity.Controllers
         SecurityStamp = Guid.NewGuid().ToString()
       };
 
-      var result = await userManager.CreateAsync(user, "123456");
+      var result = await userManager.CreateAsync(user, "MyPassword1!");
 
       if (result.Succeeded)
       {
         await userManager.AddToRoleAsync(user, "Customer");
 
-        var mobileNoClaim = new Claim("MobileNo", "1111111111", ClaimValueTypes.String);
-      }
+        // var mobileNoClaim = new Claim("MobileNo", "1111111111", ClaimValueTypes.String);
 
-      return Ok(user);
+        return Ok(user);
+      }
+      else
+      {
+        return BadRequest(result);
+      }
     }
 
     [HttpPost("[action]")]
